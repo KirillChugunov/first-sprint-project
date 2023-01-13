@@ -79,13 +79,11 @@
 .description {
   margin-top:100px;
   padding-bottom:100px;
-  border:solid pink;
   display:flex;
   justify-content: center;
   
 }
 .description__two-columns {
-  border:solid red;
   width:80%;
   display:flex;
   flex-direction: row;
@@ -94,15 +92,14 @@
   }
 
  .two-columns__brief {
-  border:solid green;
   width:175px;
   font-size:18px;
   font-weight:normal;
   line-height:1.2;
+  margin:0;
  }
 
  .brief__main-text {
-  border:solid yellow;
   width:80%;
   min-width: 784px;
   }
@@ -110,6 +107,18 @@
   .main-text__paragraph:nth-child(2) {
     margin-top:30px;
     margin-bottom:30px;
+  }
+
+  .main-text__paragraph:nth-child(1) {
+    margin-top:30px;
+    margin-bottom:30px;
+    margin:0;
+  }
+
+  .main-text__paragraph:nth-child(3) {
+    margin-top:30px;
+    margin-bottom:30px;
+    margin:0;
   }
 
   .main-text__paragraph {
@@ -123,6 +132,106 @@
     font-weight:600;
     line-height:34px;
   }
+
+  .section-title {
+    width:60%;
+    margin-top:100px;
+    margin:100px auto 20px auto;
+    line-height:1.15;
+    font-size:60px;
+    font-weight:600;
+    text-align: center;
+  }
+
+  .section-subtitiel {
+    width:60%;
+    margin-top:20px;
+    margin:auto;
+    line-height:34px;
+    font-size:24px;
+    font-weight:normal;
+    text-align: center;
+  }
+
+  .table {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width:1100px;
+    margin:auto;
+    }
+
+  .table__cell {
+    margin-top:60px;
+    width:250px;
+  }
+
+  .table__text {
+    margin:20px 0 0 0;
+    line-height:1,2;
+    font-size:18px;
+    font-weight:normal;
+  }
+
+  .table__heading {
+    line-height:1.15;
+    font-size:24px;
+    font-weight:600;
+    }
+
+.feynman {
+  height:890px;
+  display:flex;
+  background-image:url("../images/feynman.png");
+  background-size:867px 637px;
+  background-position:left bottom;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faynman__title {
+    text-align: center;
+    border:solid red;
+    margin-top:100px;
+    width:648px;
+    line-height:1.15;
+    font-size:120px;
+    font-weight:600;
+    margin-bottom:0;
+  }
+
+
+.faynman__subtitle {
+  border:solid green;
+  margin-top:70px;
+  line-height:51px;
+  font-size:36px;
+  font-weight:normal;
+  margin-bottom:0;
+}
+
+.faynman__link {
+  border:solid blue;
+  line-height:51px;
+  font-size:36px;
+  font-weight:normal;
+  position:absolute;
+  right:48px;
+  top:50%;
+  
+}
+
+.faynman__img {
+  border:solid yellow;
+  width:867px;
+  height: 637px;
+  position:absolute;
+  left:0px;
+  bottom:0px;
+}
+
 
  
 
