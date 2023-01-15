@@ -2,7 +2,7 @@
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
 }
 
 .header {
@@ -14,24 +14,27 @@
   justify-content: center;
   position: relative;
   background-color: #f2f2f2;
-  }
+}
 
 .logo_place_header {
   /* background-image: url("../images/logo_place_header.svg");
   background-size: cover;  в пачке инструктор сказал, что допустимы оба способа вставки лого с учетом использования в футере, поэтому такой способ также указываю*/
   position: absolute;
-  width: 228px;
-  height: 32px;
   top: 30px;
   left: 64px;
   z-index: 1;
+}
+
+.logo {
+  width: 228px;
+  height: 32px;
 }
 
 .header__title {
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
-  margin:0 0 0 64px;
+  margin: 0 0 0 64px;
   width: 730px;
 }
 
@@ -43,7 +46,7 @@
   position: absolute;
   left: 64px;
   bottom: 30px;
-  margin:0;
+  margin: 0;
 }
 
 .header__main-illustration {
@@ -69,9 +72,8 @@
   justify-content: center;
 }
 
-.description__two-columns {
-  margin-top:100px;
-  /*в брифе общего макета указаны маржины между хедером и родителькимм блоком, аналогично в странице брифа для этого блока. Дублироать, я так понимаю, не стоит*/
+.two-columns {
+  padding-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -86,42 +88,40 @@
   margin: 0;
 }
 
-.brief__main-text {
+.two-columns_main-text {
   width: 80%;
   min-width: 784px;
 }
 
-.main-text__paragraph:nth-child(2) {
+.two-columns__paragraph:nth-child(2) {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.main-text__paragraph:nth-child(1) {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin: 0;
-}
-
-.main-text__paragraph:nth-child(3) {
+.two-columns__paragraph:nth-child(1) {
   margin-top: 30px;
   margin-bottom: 30px;
   margin: 0;
 }
 
-.main-text__paragraph {
+.two-columns__paragraph:nth-child(3) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin: 0;
+}
+
+.two-columns__paragraph {
   font-size: 24px;
   font-weight: normal;
   line-height: 34px;
 }
 
-.main-text__span-accent {
+.two-columns__span-accent {
   font-size: 24px;
   font-weight: 600;
   line-height: 34px;
 }
-.digits {
-  
-}
+
 .section-title {
   width: 60%;
   margin: 100px auto 20px auto;
@@ -150,7 +150,7 @@
 }
 
 .table__theme_light {
-  margin-bottom:100px;
+  margin-bottom: 100px;
 }
 
 .table__cell {
@@ -181,7 +181,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  
+  background-color: #f2f2f2;
 }
 
 .faynman__title {
@@ -190,7 +190,7 @@
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  margin:0;
+  margin: 100px auto 0 auto;
 }
 
 .faynman__subtitle {
@@ -208,6 +208,7 @@
   position: absolute;
   right: 48px;
   top: 50%;
+  text-decoration: none;
 }
 
 .faynman__img {
@@ -222,7 +223,6 @@
   overflow: hidden;
   background-color: #1f1f1f;
   position: relative;
-  padding-bottom: 90px;
 }
 
 .kaufman-triangle {
@@ -247,8 +247,8 @@
 
 .section-title-theme-dark {
   color: white;
-  width:60%;
-  margin:90px auto 20px auto;
+  width: 60%;
+  margin: 90px auto 20px auto;
 }
 
 .section-subtitiel-theme-dark {
@@ -256,16 +256,15 @@
 }
 
 .footer {
-  padding-top:60px;
   background-color: #1f1f1f;
-  min-width: 350px;
+  min-height: 350px;
   display: flex;
   justify-content: center;
-  margin-bottom:40px;
 }
+
 .footer__columns {
-  margin-bottom:40px;
-  margin-top:60px;
+  padding-bottom: 40px;
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -273,11 +272,9 @@
 
 .logo_place_footer {
   background-image: url("../images/logo_place_footer.svg");
-  width: 228px;
-  height: 32px;
-  }
+}
 
-.footer_column {
+.footer__column {
   flex-basis: 711px;
   display: flex;
   flex-direction: column;
@@ -289,11 +286,11 @@
   font-size: 18px;
   font-weight: normal;
   color: white;
-  margin-top:18px;
-  margin-bottom:18px;
- }
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
 
-.column-heading {
+.footer__column-heading {
   color: white;
   line-height: 30px;
   font-size: 18px;
@@ -301,7 +298,7 @@
   margin: 0;
 }
 
-.column-links {
+.footer__column-links {
   color: white;
   line-height: 30px;
   font-size: 18px;
@@ -309,14 +306,12 @@
   list-style: none;
   padding: 0;
   margin: 20px 0 16px 0;
-  }
+}
 
-.social-icon {
+.footer__social-icon {
   margin-right: 10px;
 }
 
 .footer__social {
- display: flex;  
- flex-direction: column;
- justify-content: flex-start;
+  list-style: none;
 }
